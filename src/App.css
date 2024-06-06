@@ -2,3 +2,128 @@
     text-align: right;
     text-decoration: none;
   }
+
+
+  .carousel-item img{
+    height:50%;
+  }
+
+  .carousel-caption p {
+    color: white;
+  }
+
+  .white-indicator {
+    background-color: #fff !important;
+}
+  
+.icon{
+    font-size: 30px;
+}
+.section-title-1{
+  color:#08d9d6;
+}
+.section-title-1 span{
+  color:black;
+}
+
+.section-title{
+  color: #e9be3e;
+}
+
+.icon-block{
+  padding: 20px;
+  font-size: 24px;
+  color: #08d9d6;
+  
+}
+.icon-block img{
+  border-radius: 0.5rem;
+}
+.icon-block h6 {
+  color: black;
+}
+
+.person{
+  color:gray;
+}
+
+.guide-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.guide-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 300px; 
+}
+
+.footer{
+  background-color: #113448;
+  padding-top: 5rem;
+}
+
+.tavel-content h4{
+  color: white;
+}
+
+.tavel-content p{
+  color: white;
+  font-size: 12px;
+}
+
+.tavel-content ul li{
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+.travel-link h4{
+  color: white;
+}
+
+.tavel-content li a{
+  text-decoration: none;
+  color: white;
+}
+
+.style-image img{
+  border-radius: 0.5rem;
+}
+
+ .destination-image img{
+    width:100%;
+    /* height:100%; */
+    border-radius: 0.5rem;
+    position: relative;
+   
+} 
+.overlay-text{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.card-text{
+  position:  absolute;
+  bottom: 40px !important;
+  color: #e9be3e !important;
+  /* font-weight: 200 !important; */
+}
+
+.card-title{
+  position:absolute;
+  bottom: 5px !important;
+
+  /* font-weight: 200 !important; */
+}
+
+.white{
+  color: white;
+}

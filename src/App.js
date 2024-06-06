@@ -1,32 +1,34 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-// import Login from "./components/Login";
-import { Navbar } from "./components/Navbar";
-import Contact from "./components/Contact";
-import About from "./components/About";
-import Destination from "./components/Destination";
-import Tour from "./components/Tour";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Register from "./components/Register";
-import Otp from "./components/Otp";
+import * as mdb from "mdb-ui-kit";
+// import Login from "./pages/Login";
+import { Navbar } from "./pages/Navbar";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Destination from "./pages/Destination";
+import Tour from "./pages/Tour";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Otp from "./pages/Otp";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className="" style={{ marginTop: "68px" }}>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/destination" element={<Destination />} />
-          <Route path="tours" element={<Tour />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="about" element={<About />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
-          <Route path="otp" element={<Otp />} />
-        </Routes>
-      </div>
+
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/destination" element={<Destination />} />
+        <Route path="tours" element={<Tour />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="about" element={<About />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="otp" element={<Otp />} />
+      </Routes>
     </>
   );
 }

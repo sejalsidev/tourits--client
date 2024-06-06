@@ -26,10 +26,6 @@ const Register = () => {
       .required("Please confirm your password"),
   });
 
-  // const handleSubmit = (values, { resetForm }) => {
-
-  // };
-
   const paperStyle = {
     padding: 20,
     height: "65vh",
@@ -56,8 +52,10 @@ const Register = () => {
               .then((data) => {
                 console.log("Received data:", data);
                 if (data.status === 200) {
-                  // Assuming Navigate is a function to redirect, adjust if necessary
-                  Navigate("/login");
+                  const ffff = Navigate("/Otp", {
+                    state: { email: values.email },
+                  });
+                  console.log(ffff, "ffff");
                 }
                 resetForm();
               })

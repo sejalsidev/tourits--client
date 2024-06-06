@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 import OtpInput from "react-otp-input";
 import { Button, Grid, Paper } from "@mui/material";
+import { otpRegister } from "../servicer/otp";
+import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Otp = () => {
+  const location = useLocation();
+  const { email } = location.state;
   const [otp, setOtp] = useState("");
+  const [result, setResult] = useState({
+    OTP: 0,
+    email: email,
+  });
+  const Navigate = useNavigate();
   const paperStyle = {
     padding: 20,
     height: "20vh",
@@ -11,11 +21,35 @@ const Otp = () => {
     margin: "100px auto",
     align: "center",
   };
+
+  console.log(email, "email ");
+  /* useEffect((values) => {
+    otpRegister(values).then((data) => {
+      console.log(data);
+      if (data.status === 200) {
+        Navigate("/login");
+      }
+    });
+  }); */
   const handleClear = () => {
     setOtp("");
   };
-  const handleOtp = () => {};
-  const handleSubmit = () => {};
+  const handleOtp = () => {
+    handleSubmit();
+  };
+  const handleSubmit = () => {
+    console.log(otp, "otp");
+    const values = {
+      OTP: otp,
+      email: email,
+    };
+    const data = otpRegister(values).then((data) => {
+      console.log(data);
+      if (data.status === 201) {
+        Navigate("/login");
+      }
+    });
+  };
   return (
     <Grid>
       <Paper elevation={4} style={paperStyle}>
@@ -30,7 +64,7 @@ const Otp = () => {
             <OtpInput
               value={otp}
               onChange={setOtp}
-              numInputs={4}
+              numInputs={6}
               renderSeparator={<span>-</span>}
               renderInput={(props) => <input {...props} />}
               onComplete={handleSubmit}
@@ -76,7 +110,7 @@ const Otp = () => {
                 },
               }}
               variant="contained"
-              onClick={handleOtp}
+              onClick={handleSubmit}
             >
               GET OTP
             </Button>
