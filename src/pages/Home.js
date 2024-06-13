@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaRegFlag } from "react-icons/fa6";
 import { SiTrustedshops } from "react-icons/si";
 import { FaSlideshare } from "react-icons/fa";
-import Button from "@mui/material/Button";
 import Slider from "../Component/Slider/Slider";
 import Title from "../Component/Title/Title";
 import TravelPerferct from "../Component/Travelperfection/TravelPerferct";
 import Footer from "../Component/Footer/Footer";
 import BestPackage from "../Component/TourPackage/BestPackage";
+import Guide from "../Component/Guide/Guide";
 
 const Home = () => {
   const data = [
@@ -101,103 +101,7 @@ const Home = () => {
         heading={"Excellent Guides"}
         description={"Exceptional Guides for unforgettable journey"}
       />
-      <div className="container" style={{ marginBottom: "60px" }}>
-        <div className="row d-flex justify-content-center">
-          <div className="col-xxl-3 col-md-6 col-sm-12">
-            <div className="guide-container">
-              <img src="../images/img1.jpg" alt="" className="guide-image" />
-              <Button
-                type="submit"
-                sx={{
-                  width: "100%",
-                  backgroundColor: "#16aaac",
-                  color: "#fff",
-                  "&:hover": {
-                    backgroundColor: "#16aaac",
-                  },
-                  "&:active": {
-                    backgroundColor: "#16aaac",
-                  },
-                }}
-                fullWidth
-                variant="contained"
-              >
-                Salmon Thuir
-              </Button>
-            </div>
-          </div>
-          <div className="col-xxl-3 col-md-6 col-sm-12">
-            <div className="guide-container">
-              <img src="../images/img2.jpg" alt="" className="guide-image" />
-              <Button
-                type="submit"
-                sx={{
-                  width: "100%",
-                  backgroundColor: "#16aaac",
-                  color: "#fff",
-                  "&:hover": {
-                    backgroundColor: "#16aaac",
-                  },
-                  "&:active": {
-                    backgroundColor: "#16aaac",
-                  },
-                }}
-                fullWidth
-                variant="contained"
-              >
-                Horke Pels
-              </Button>
-            </div>
-          </div>
-          <div className="col-xxl-3 col-md-6 col-sm-12 ">
-            <div className="guide-container">
-              <img src="../images/img3.jpg" alt="" className="guide-image" />
-              <Button
-                type="submit"
-                sx={{
-                  width: "100%",
-                  backgroundColor: "#16aaac",
-                  color: "#fff",
-                  "&:hover": {
-                    backgroundColor: "#16aaac",
-                  },
-                  "&:active": {
-                    backgroundColor: "#16aaac",
-                  },
-                }}
-                fullWidth
-                variant="contained"
-              >
-                Solden Kalos
-              </Button>
-            </div>
-          </div>
-          <div className="col-xxl-3 col-md-6 col-sm-12">
-            <div className="guide-container">
-              <img src="../images/img4.jpg" alt="" className="guide-image" />
-              <Button
-                type="submit"
-                sx={{
-                  width: "100%",
-                  backgroundColor: "#16aaac",
-                  color: "#fff",
-                  "&:hover": {
-                    backgroundColor: "#16aaac",
-                  },
-                  "&:active": {
-                    backgroundColor: "#16aaac",
-                  },
-                }}
-                fullWidth
-                variant="contained"
-              >
-                Nelson Bam
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <Guide />
       {/* -------------------------------footer------------------------------------- */}
       <Footer />
     </>

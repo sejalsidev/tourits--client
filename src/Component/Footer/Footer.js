@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (

@@ -38,6 +38,7 @@ const BestPackage = () => {
                     type="submit"
                     style={{
                       marginLeft: "60%",
+                      marginTop: "-10%",
                       backgroundColor: "#16aaac",
                       color: "#fff",
                       "&:hover": {

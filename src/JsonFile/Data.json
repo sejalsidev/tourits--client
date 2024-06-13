@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "city":"surat",
+      "image":"/images/goa.jpeg",
+      "title":"Goa",
+      "description":"goaaaaaaa",
+      "date":"date"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "city":"surat",
+      "image":"/images/goa.jpeg",
+      "title":"Goa",
+      "description":"goaaaaaaa",
+      "date":"date"
+    },
+    {
+      "id": 3,
+      "name": "Michael Brown",
+      "email": "michael.brown@example.com",
+      "city":"surat",
+      "image":"/images/goa.jpeg",
+      "title":"Goa",
+      "description":"goaaaaaaa",
+      "date":"date"
+    }
+  ]

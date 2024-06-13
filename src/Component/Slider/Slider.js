@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel, initMDB } from "mdb-ui-kit"; // Assuming you have installed mdb-ui-kit as a dependency
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import "./Slide.css";
 import axios from "axios";
 const Slider = () => {
   const [slides, setSlides] = useState([]);
@@ -42,27 +43,24 @@ const Slider = () => {
           ))}
         </div>
 
-        <div className="carousel-inner" style={{ height: "800px" }}>
-          {slides?.map((slide, index) => (
-            <div
-              className={`carousel-item ${index === 0 ? "active" : ""}`}
-              key={index}
-            >
-              <img
-                src={slide.imageUrl}
-                className="d-block w-100"
-                alt={slide.altText}
-              />
-              <div className="carousel-caption ">
-                {/* <h5>{slide.title}</h5>
-                <p>{slide.heading}</p>
-                <p>{slide.blog}</p> */}
-                <h5>Demo</h5>
-                <h5>Demo</h5>
-                <h5>Demo</h5>
+        <div className="">
+          <div className="carousel-inner" style={{ height: "800px" }}>
+            {slides?.map((slide, index) => (
+              <div
+                className={` main-slider carousel-item ${
+                  index === 0 ? "active" : ""
+                }`}
+                key={index}
+              >
+                <img
+                  src={slide.imageUrl}
+                  className="d-block w-100"
+                  alt={slide.altText}
+                />
+                <div className="slider-text">{slide?.title}</div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <button
           className="carousel-control-prev"

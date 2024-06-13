@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import { Typography, Toolbar, Button, Box } from "@mui/material";
 import FestivalIcon from "@mui/icons-material/Festival";
@@ -30,20 +30,20 @@ export const Navbar = () => {
             </Button>
           </Box>
           <Button
+            sx={{ marginLeft: "auto", backgroundColor: "#259b9d" }}
+            color="inherit"
+            component={RouterLink}
+            to="/tours"
+          >
+            Book Now
+          </Button>
+          {/* <Button
             sx={{ marginLeft: "auto" }}
             color="inherit"
             component={RouterLink}
             to="/login"
           >
             Login
-          </Button>
-          {/* <Button
-            sx={{ marginLeft: "10px" }}
-            color="inherit"
-            component={RouterLink}
-            to="/register"
-          >
-            Register
           </Button> */}
         </Toolbar>
       </AppBar>
