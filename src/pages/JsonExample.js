@@ -5,10 +5,13 @@ import Data from "../JsonFile/Data.json";
 import { Button, Modal, Form as BootstrapForm } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const JsonExample = () => {
   const [data, setData] = useState(Data);
   const [filteredData, setFilteredData] = useState(Data);
+  const [startDate, setStartDate] = useState(new Date());
   const [search, setSearch] = useState("");
   const [show, setShow] = useState(false);
   const [detail, setSelectedDetail] = useState(null);
@@ -38,6 +41,11 @@ const JsonExample = () => {
     alert("Data submitted");
   };
 
+  const handleClear = () => {
+    setSearch("");
+    setFilteredData(data);
+  };
+
   const handleSearch = (event) => {
     setSearch(event.target.value);
     const filtered = data.filter((item) => {
@@ -63,6 +71,9 @@ const JsonExample = () => {
           onChange={handleSearch}
           className="mb-4"
         />
+        <Button variant="secondary" onClick={handleClear}>
+          Clear
+        </Button>
         <Formik
           initialValues={{
             name: "",
@@ -106,9 +117,9 @@ const JsonExample = () => {
                       <td>{item.email}</td>
                       <td>{item.city}</td>
                       <td>
-                        <input
-                          type="date"
-                          // value={new Date(detail.date).toString()}
+                        <ReactDatePicker
+                          selected={startDate}
+                          onChange={(date) => setStartDate(date)}
                         />
                       </td>
                       <td>{item.description}</td>
@@ -164,7 +175,10 @@ const JsonExample = () => {
               </p>
               <p>
                 <strong>Date:</strong>{" "}
-                {new Date(detail.date).toLocaleDateString()}
+                <ReactDatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                />
               </p>
               <p>
                 <strong>Description:</strong> {detail.description}

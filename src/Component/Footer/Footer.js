@@ -38,25 +38,25 @@ const Footer = () => {
                   <li>
                     <a
                       className="white"
-                      href="http://localhost:3000/destination"
+                      href="http://localhost:3001/destination"
                     >
                       Destination
                     </a>
                   </li>
                   <li>
                     {" "}
-                    <a className="white" href="http://localhost:3000/tour">
+                    <a className="white" href="http://localhost:3001/tours">
                       Tour
                     </a>
                   </li>
                   <li>
-                    <a className="white" href="http://localhost:3000/contact">
+                    <a className="white" href="http://localhost:3001/contact">
                       Contact Us
                     </a>
                   </li>
                   <li>
                     {" "}
-                    <a className="white" href="http://localhost:3000/about">
+                    <a className="white" href="http://localhost:3001/about">
                       About US
                     </a>
                   </li>

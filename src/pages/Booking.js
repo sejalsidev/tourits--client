@@ -151,12 +151,12 @@ const Booking = () => {
                 mobile: "",
                 age: "",
                 bordingPoint: "",
-                members: Array(numPeople - 1).fill({
-                  pfullname: "",
-                  pmobile: "",
-                  pgender: "",
-                  page: "",
-                }),
+                // members: Array(numPeople - 1).fill({
+                //   pfullname: "",
+                //   pmobile: "",
+                //   pgender: "",
+                //   page: "",
+                // }),
               }}
               validationSchema={validationSchema}
               onSubmit={handleBook}

@@ -19,6 +19,7 @@ import ChangePassword from "./pages/ChangePassword";
 import ExampleJson from "./pages/ExampleJson";
 import JsonExample from "./pages/JsonExample";
 import ExampleTable from "./pages/ExampleTable";
+import UserDetails from "./pages/UserDetails";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/examplejson" element={<ExampleJson />} />
         <Route path="/jsonexample" element={<JsonExample />} />
         <Route path="/ExampleTable" element={<ExampleTable />} />
+        <Route path="/userdetails" element={<UserDetails />} />
       </Routes>
     </>
   );

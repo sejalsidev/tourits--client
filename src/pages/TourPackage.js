@@ -116,7 +116,7 @@ const TourPackage = () => {
                 className="card border form-control mb-3"
                 style={{ width: "auto", height: "200px" }}
               >
-                <p>Per Person: ${packageData.price * numPeople} </p>
+                <p>Per Person: ${packageData.price} </p>
                 <p>Other Fees: Free</p>
                 <p className="border">Total: ${totalPrice}</p>
                 <p>Note: Click Instant Book and Add Passenger Details</p>
