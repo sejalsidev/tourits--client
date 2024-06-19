@@ -25,7 +25,7 @@ const UserDetails = () => {
         data,
         "<=====================data from action modal =====================>"
       );
-      setUser(data); // Properly update the user state with fetched data
+      setUser(data);
     } catch (error) {
       console.log("Error:", error);
     }
@@ -39,8 +39,8 @@ const UserDetails = () => {
     try {
       const register = await userRegistration(values);
       if (register) {
-        fetchData(); // Refresh user data after registration
-        resetForm(); // Reset the form after successful registration
+        fetchData();
+        resetForm();
       }
     } catch (error) {
       console.log("Registration error:", error);
@@ -50,7 +50,7 @@ const UserDetails = () => {
   return (
     <div className="container">
       <div className="row align-center justify-content-center">
-        <div className="col-xl-6 col-lg-6 col-sm-6">
+        <div className="col">
           <Formik
             initialValues={{
               name: "",
@@ -67,10 +67,10 @@ const UserDetails = () => {
                 style={{ height: "100vh", marginTop: "300px" }}
               >
                 <div className="row d-flex align-center justify-content-center">
-                  <div className="col-xl-6 col-lg-6 col-sm-6 mb-2">
+                  <div className="col">
                     <h1>Register</h1>
                     <div className="p-2">
-                      <label htmlFor="name" style={{ marginBottom: "5px" }}>
+                      <label htmlFor="name" style={{ marginRight: "5px" }}>
                         User Name
                       </label>
                       <Field
@@ -86,7 +86,7 @@ const UserDetails = () => {
                       />
                     </div>
                     <div className="p-2">
-                      <label htmlFor="email" style={{ marginBottom: "5px" }}>
+                      <label htmlFor="email" style={{ marginRight: "5px" }}>
                         Email ID
                       </label>
                       <Field
@@ -102,7 +102,7 @@ const UserDetails = () => {
                       />
                     </div>
                     <div className="p-2">
-                      <label htmlFor="password" style={{ marginBottom: "5px" }}>
+                      <label htmlFor="password" style={{ marginRight: "5px" }}>
                         Password
                       </label>
                       <Field
@@ -134,7 +134,7 @@ const UserDetails = () => {
                   <div className="col-xl-6 col-lg-6 col-sm-6 mb-2">
                     <h1>Login</h1>
                     <div className="p-2">
-                      <label htmlFor="email" style={{ marginBottom: "5px" }}>
+                      <label htmlFor="email" style={{ marginRight: "5px" }}>
                         Email ID
                       </label>
                       <Field
@@ -150,7 +150,7 @@ const UserDetails = () => {
                       />
                     </div>
                     <div className="p-2">
-                      <label htmlFor="password" style={{ marginBottom: "5px" }}>
+                      <label htmlFor="password" style={{ marginRight: "5px" }}>
                         Password
                       </label>
                       <Field

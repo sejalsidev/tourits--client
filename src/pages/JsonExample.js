@@ -9,7 +9,7 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const JsonExample = () => {
-  const [data, setData] = useState(Data);
+  const [data] = useState(Data);
   const [filteredData, setFilteredData] = useState(Data);
   const [startDate, setStartDate] = useState(new Date());
   const [search, setSearch] = useState("");

@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-// import Login from "./pages/Login";
 import { Navbar } from "./pages/Navbar";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -20,6 +19,8 @@ import ExampleJson from "./pages/ExampleJson";
 import JsonExample from "./pages/JsonExample";
 import ExampleTable from "./pages/ExampleTable";
 import UserDetails from "./pages/UserDetails";
+import ExampleDetails from "./pages/ExampleDetails";
+import DetailsExample from "./pages/DetailsExample";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
         <Route path="/jsonexample" element={<JsonExample />} />
         <Route path="/ExampleTable" element={<ExampleTable />} />
         <Route path="/userdetails" element={<UserDetails />} />
+        <Route path="/ExampleDetails" element={<ExampleDetails />} />
+        <Route path="/DetailsExample" element={<DetailsExample />} />
       </Routes>
     </>
   );
